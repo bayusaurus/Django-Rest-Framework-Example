@@ -17,7 +17,7 @@ class PostPaginationList(APIView):
         request.GET._mutable = False
 
 
-        queryset = Post.objects.all()
+        queryset = Post.objects.all().order_by('-created_date')
         paginator = self.pagination_class()
         paginated_queryset = paginator.paginate_queryset(queryset, request)
         serializer = PostSerializer(paginated_queryset, many=True)
@@ -34,7 +34,7 @@ class PostPaginationListStatus(APIView):
         request.GET['offset'] = offset
         request.GET._mutable = False
 
-        queryset = Post.objects.filter(status=flag.capitalize())
+        queryset = Post.objects.filter(status=flag.capitalize()).order_by('-created_date')
         paginator = self.pagination_class()
         paginated_queryset = paginator.paginate_queryset(queryset, request)
         serializer = PostSerializer(paginated_queryset, many=True)
@@ -67,10 +67,11 @@ class PostDetail(APIView):
 
     """Update"""
     def put(self, request, id, format=None):
-        # if not request.user.is_authenticated:
-        #     return Response(status=status.HTTP_403_FORBIDDEN, data={"detail": "Authentication credentials were not provided."})
+        print(request.data)
         post = self.get_object(id)
-        serializer = PostSerializer(post, data=request.data)
+        serializer = PostUpdateSerializer(post, data=request.data)
+        print(serializer)
+        print(serializer.is_valid())
         if serializer.is_valid():
             serializer.save()
             return Response(data={'detail': 'Data successfully updated', 'data': serializer.data}, status=status.HTTP_200_OK)
@@ -78,8 +79,6 @@ class PostDetail(APIView):
 
     """Delete"""
     def delete(self, request, id, format=None):
-        # if not request.user.is_authenticated:
-        #     return Response(status=status.HTTP_403_FORBIDDEN, data={"detail": "Authentication credentials were not provided."})
         post = self.get_object(id)
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT, data={'detail': 'Data successfully deleted'})

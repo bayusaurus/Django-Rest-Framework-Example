@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "ba543662-99d6-4c71-b22f-2a9c9093de6c",
+		"name": "Article Api Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27824956"
+	},
+	"item": [
+		{
+			"name": "Post Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": " title",
+							"value": "Box Office: ‘Spider-Man: Across the Spider-Verse’ Slingshots to Huge $120.5 Million Debut",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "“Spider-Man: Across the Spider-Verse” webbed up a stellar $120.5 million in its domestic box office debut. The film beat expectations to land the second-biggest opening weekend of the year, behind only “The Super Mario Bros. Movie” with $146 million, as well as the third-biggest opening weekend for any “Spider-Man” film.\n\nSony’s animated sequel is benefitting from great reviews and positive word-of-mouth, as well as goodwill from its predecessor, 2018’s Oscar-winning “Spider-Man: Into the Spider-Verse.” Initial ticket sales were significantly higher than the first film, which introduced audiences to Miles Morales and the idea that “anyone can wear the mask” and opened to just $35.5 million. But it proved to have enduring appeal and stuck around in theaters for a while, ending its run with $190 million in North America and $384 million globally.\n\n\n“Across the Spider-Verse” seized another $88.1 million from 59 territories in its international box office debut, led by China with $17.3 million. That brings its worldwide total to $208.6 million to start.\n\n“This is an exceptionally good opening for an animation follow-up sequel,” says David A. Gross, who runs the movie consulting firm Franchise Entertainment Research. “‘Spider-Verse’ took a well-liked superhero, gave the storytelling an original visual style and voice and created a unique experience.”\n\nJoaquim Dos Santos, Kemp Powers and Justin K. Thompson directed the PG-rated “Across the Spider-Verse,” which cost $100 million. The story follows Miles and Gwen Stacy (a.k.a. Spider-Woman) as they attempt to save their fellow Spider People from the villain who goes by the name the Spot. Shameik Moore and Hailee Steinfeld returned to voice Miles and Gwen, while the rest of the voice cast includes Brian Tyree Henry, Issa Rae, Jason Schwartzman, Daniel Kaluuya and Oscar Isaac. Audiences awarded the film an “A” CinemaScore while critics bestowed it with a 95% average on Rotten Tomatoes. Other than Disney’s “Guardians of the Galaxy Vol. 3,” it’s been a minute since a superhero movie has received that kind of praise.\n\n“Across the Spider-Verse” took the No. 1 spot, but it wasn’t the only newcomer to box office charts. Disney and 20th Century’s “The Boogeyman,” adapted from Stephen King’s short story of the same name, opened in third place with $12.3 million from 3,205 theaters. The horror story added $7.7 million at the international box office, bringing its weekend total to $20 million worldwide.\n\n\nThe movie, which arrived slightly behind expectations, was originally slated to debut on Hulu and cost a modest $35 million to produce. Critics and audiences were mixed on “The Boogeyman,” starring “Yellowjackets” actor Sophie Thatcher and Chris Messina. It holds a 60% on Rotten Tomatoes and earned a “B-” CinemaScore.\n\nDisney’s “The Little Mermaid” remake, starring Halle Bailey as Ariel and Melissa McCarthy as Ursula, slid to the No. 2 spot with $40.6 million from 4,320 venues in its second weekend of release. That’s a 57% decline from its debut. So far, “The Little Mermaid” has grossed $186 million in North America. Overseas, the under-the-sea tale has collected $42 million in its sophomore outing, which brings its international tally to $140 million and its worldwide total to $326 million.\n\nDisney accounted for three movies in the top five, as Marvel’s “Guardians of the Galaxy Vol. 3” took fourth place with $10.2 million. To date, the superhero threequel has generated $332 million domestically and a mighty $780 million globally.\n\nUniversal’s “Fast X” rounded out the top five, adding $9.2 million from 3,467 locations in its third outing. It’s generated $128 million at the domestic box office, which isn’t that promising for a blockbuster of its size. However, it’s fared far better at the international box office with $474 million, taking global ticket sales past the $600 million mark.",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Movie",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Draft",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/article/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"article",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Get Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/article/5/0/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"article",
+						"5",
+						"0",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Get Single Particular Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/article/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"article",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Update Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Bring Me The Horizon tease new music with launch of YouTube series",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "The new series, BMTHS5: Post Human EU, documents the band’s recent European headline tour, which wrapped up in February.\n\nOn the first episode, the band hit the road and linked up with Rammstein frontman Till Lindemann in Berlin, who “gave us booze” as the video’s caption reveals.\n\nIncluded in the video are snippets of new music, though the release of any new music isn’t confirmed yet.\n\nFor now, watch the new video and hear the snippets of new music below.\n\nLast month, Bring Me The Horizon drummer Matt Nicholls said the band are set to release new music “pretty soon”.\n\nThe drummer confirmed in a new interview, that BMTH wrote and recorded “a bunch of stuff” during their tour of the US at the end of 2022, and “hopefully” a new single will be arriving in the near future.\n\nThe band have been working on new music in a studio built into the back of their tour bus with producer Zakk Cervini (who also produced their last release, 2020’s ‘Post Human: Survival Horror’).\n\n“New songs coming? Yeah,” the drummer told Impericon. “We’re actually working on them at the minute. We’ve got a studio on our bus. We did it in America – we wrote a bunch of stuff, actually, and recorded some stuff in America as well. So hopefully one pretty soon.”",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Music",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Publish",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/article/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"article",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Delete Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/article/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"article",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
