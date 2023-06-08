@@ -30,7 +30,7 @@ py manage.py migrate
 ```bash
 py manage.py runserver
 ```
--Try the application in localhost:8000
+- Try the application in localhost:8000
 
 ## About The Application
 
